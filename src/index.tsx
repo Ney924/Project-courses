@@ -1,16 +1,13 @@
 import { render } from "react-dom";
-import App from "./App";
+import App from "./app/App";
 import { BrowserRouter } from "react-router-dom";
-import { Suspense } from "react";
-import ThemeProvider from "./styles/theme/ThemeProvider";
+import ThemeProvider from "./app/provider/ThemeProvider/ui/ThemeProvider";
 
 render(
-  <Suspense fallback={<>loading</>}>
-    <BrowserRouter>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
-    </BrowserRouter>
-  </Suspense>,
+  <BrowserRouter>
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  </BrowserRouter>,
   document.getElementById("root")
 );
