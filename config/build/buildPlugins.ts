@@ -1,4 +1,4 @@
-import webpack from "webpack";
+import webpack, { HotModuleReplacementPlugin } from "webpack";
 
 import HTMLWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
@@ -13,5 +13,6 @@ export function buildPlugins({
     }),
     new webpack.ProgressPlugin(),
     new MiniCssExtractPlugin(),
+    new HotModuleReplacementPlugin(),
   ];
 }
