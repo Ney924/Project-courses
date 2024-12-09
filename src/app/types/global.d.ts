@@ -14,3 +14,6 @@ declare module "*.svg" {
 declare module "*.jpg";
 declare module "*.jpeg";
 declare module "*.png";
+
+// глобальные переменные
+declare const __IS_DEV__: boolean;
